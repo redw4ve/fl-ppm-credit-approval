@@ -406,7 +406,7 @@ Locked workflow defaults:
 - `HIDDEN_SIZE = 128`, `NUM_LAYERS = 2` (the larger 256 / 3 trunk evaluated in the third tuning pass did not lift
   any test metric and hurt next-activity macro F1, so the smaller trunk is locked)
 - `OUTCOME_LABEL_SMOOTHING = 0.10` on the outcome cross-entropy head
-- `OUTCOME_CLASS_WEIGHT_POWER = 0.5`: power 0 reproduces unweighted CE, power 1 keep full inverse-frequency and
+- `OUTCOME_CLASS_WEIGHT_POWER = 0.5`: power 0 reproduces unweighted CE, power 1 keeps full inverse-frequency and
   intermediate values temper between the two
 - `OUTCOME_HEAD_DROPOUT = 0.45` for the outcome head
 - The E_05 module carries `OUTCOME_LABEL_SMOOTHING = 0.10` and `OUTCOME_HEAD_DROPOUT = 0.45` as its own defaults,
