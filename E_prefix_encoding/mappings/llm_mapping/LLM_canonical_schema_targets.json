@@ -1,0 +1,52 @@
+{
+  "profiles": {
+    "bpic2012": {
+      "datasets": [
+        "bpic2012"
+      ],
+      "design_notes": [
+        "Use the BPIC 2012 p98 prefix cap.",
+        "Use resource and requested amount.",
+        "Do not activate BPIC 2017 offer features."
+      ],
+      "include_offer_features": false,
+      "include_resource": true,
+      "include_static_case_features": true,
+      "prefix_cap": 42
+    },
+    "bpic2017": {
+      "datasets": [
+        "bpic2017"
+      ],
+      "design_notes": [
+        "Use the BPIC 2017 p98 prefix cap.",
+        "Use resource, LoanGoal and ApplicationType.",
+        "Activate BPIC 2017 offer-state numerical features."
+      ],
+      "include_offer_features": true,
+      "include_resource": true,
+      "include_static_case_features": true,
+      "prefix_cap": 83
+    },
+    "joint": {
+      "datasets": [
+        "bpic2017",
+        "bpic2012"
+      ],
+      "design_notes": [
+        "Keep the joint profile available for cross-dataset federation arguments.",
+        "Use the BPIC 2017 prefix cap as the wider shared cap.",
+        "Missing dataset-specific features are handled by masks and defaults."
+      ],
+      "include_offer_features": true,
+      "include_resource": true,
+      "include_static_case_features": true,
+      "prefix_cap": 83
+    }
+  },
+  "profiles_to_create": [
+    "bpic2017",
+    "bpic2012",
+    "joint"
+  ]
+}

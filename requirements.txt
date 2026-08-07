@@ -1,0 +1,30 @@
+# Pinned dependency manifest for the federated predictive process monitoring pipeline.
+# Install with: python -m pip install -r requirements.txt
+# The versions are the ones every reported result was produced with. Transitive dependencies are resolved by pip.
+
+# Preprocessing (A_01 to A_03, B_01 to B_03): XES parsing and the partitioned parquet splits.
+pm4py==2.7.22.2
+
+# Notebook execution: the A_01 and B_01 exploration notebooks run head-less through nbconvert.
+nbconvert==7.17.1
+ipykernel==7.2.0
+
+# Shared data stack: parquet IO, numeric arrays and the tabular pipeline.
+numpy==2.4.4
+pandas==3.0.2
+pyarrow==24.0.0
+
+# Prefix encoding and training (E_04 to E_08): model, metrics, progress and the thesis figures.
+torch==2.11.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+tqdm==4.67.3
+
+# Federated orchestration (E_06): the Flower strategy types and the synchronous client contract.
+flwr==1.29.0
+
+# Differential privacy (E_06 with USE_DP=true): per-sample gradients and the RDP accountant.
+opacus==1.5.4
+
+# Test suite: the shipped tests under tests/ are run with pytest.
+pytest==9.1.1

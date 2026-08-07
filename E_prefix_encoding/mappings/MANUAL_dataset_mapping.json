@@ -1,0 +1,469 @@
+{
+  "activity_mapping": {
+    "allowed_canonical_activity_labels": [
+      "A_accept_application",
+      "A_activate_application",
+      "A_approve_application",
+      "A_cancel_application",
+      "A_complete_application",
+      "A_concept_application",
+      "A_create_application",
+      "A_deny_application",
+      "A_finalize_application",
+      "A_incomplete_application",
+      "A_partly_submit_application",
+      "A_preaccept_application",
+      "A_register_application",
+      "A_submit_application",
+      "A_validate_application",
+      "O_accept_offer",
+      "O_cancel_offer",
+      "O_create_offer",
+      "O_offer_created",
+      "O_refuse_offer",
+      "O_return_offer",
+      "O_select_offer",
+      "O_send_offer",
+      "W_assess_fraud",
+      "W_call_after_offers",
+      "W_call_incomplete_files",
+      "W_complete_application",
+      "W_handle_leads",
+      "W_personal_loan_collection",
+      "W_shortened_completion",
+      "W_validate_application"
+    ],
+    "canonical_activities": {
+      "A_accept_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_ACCEPTED"
+          ],
+          "bpic2017": [
+            "A_Accepted"
+          ]
+        },
+        "rationale": "Application accepted as an intermediate application state.",
+        "token_overrides": {}
+      },
+      "A_activate_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_ACTIVATED"
+          ]
+        },
+        "rationale": "BPIC 2012 application activation has no BPIC 2017 counterpart.",
+        "token_overrides": {}
+      },
+      "A_approve_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_APPROVED"
+          ]
+        },
+        "rationale": "BPIC 2012 uses application-level approval.",
+        "token_overrides": {}
+      },
+      "A_cancel_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_CANCELLED"
+          ],
+          "bpic2017": [
+            "A_Cancelled"
+          ]
+        },
+        "rationale": "Application-level cancellation decision.",
+        "token_overrides": {}
+      },
+      "A_complete_application": {
+        "labels_by_dataset": {
+          "bpic2017": [
+            "A_Complete"
+          ]
+        },
+        "rationale": "BPIC 2017 application completion state.",
+        "token_overrides": {}
+      },
+      "A_concept_application": {
+        "labels_by_dataset": {
+          "bpic2017": [
+            "A_Concept"
+          ]
+        },
+        "rationale": "BPIC 2017 application concept state.",
+        "token_overrides": {}
+      },
+      "A_create_application": {
+        "labels_by_dataset": {
+          "bpic2017": [
+            "A_Create Application"
+          ]
+        },
+        "rationale": "BPIC 2017 application creation state.",
+        "token_overrides": {}
+      },
+      "A_deny_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_DECLINED"
+          ],
+          "bpic2017": [
+            "A_Denied"
+          ]
+        },
+        "rationale": "Application-level negative decision.",
+        "token_overrides": {}
+      },
+      "A_finalize_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_FINALIZED"
+          ]
+        },
+        "rationale": "BPIC 2012 finalization state before later offer or registration steps.",
+        "token_overrides": {}
+      },
+      "A_incomplete_application": {
+        "labels_by_dataset": {
+          "bpic2017": [
+            "A_Incomplete"
+          ]
+        },
+        "rationale": "BPIC 2017 application incomplete state.",
+        "token_overrides": {}
+      },
+      "A_partly_submit_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_PARTLYSUBMITTED"
+          ]
+        },
+        "rationale": "BPIC 2012 partial submission has no BPIC 2017 counterpart.",
+        "token_overrides": {}
+      },
+      "A_preaccept_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_PREACCEPTED"
+          ]
+        },
+        "rationale": "BPIC 2012 preliminary acceptance has no BPIC 2017 counterpart.",
+        "token_overrides": {}
+      },
+      "A_register_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_REGISTERED"
+          ]
+        },
+        "rationale": "BPIC 2012 registration state has no BPIC 2017 counterpart.",
+        "token_overrides": {}
+      },
+      "A_submit_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "A_SUBMITTED"
+          ],
+          "bpic2017": [
+            "A_Submitted"
+          ]
+        },
+        "rationale": "Application submission state.",
+        "token_overrides": {}
+      },
+      "A_validate_application": {
+        "labels_by_dataset": {
+          "bpic2017": [
+            "A_Validating"
+          ]
+        },
+        "rationale": "BPIC 2017 application validation state.",
+        "token_overrides": {}
+      },
+      "O_accept_offer": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "O_ACCEPTED"
+          ],
+          "bpic2017": [
+            "O_Accepted"
+          ]
+        },
+        "rationale": "Offer-level acceptance state.",
+        "token_overrides": {}
+      },
+      "O_cancel_offer": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "O_CANCELLED"
+          ],
+          "bpic2017": [
+            "O_Cancelled"
+          ]
+        },
+        "rationale": "Offer-level cancellation state.",
+        "token_overrides": {}
+      },
+      "O_create_offer": {
+        "labels_by_dataset": {
+          "bpic2017": [
+            "O_Create Offer"
+          ]
+        },
+        "rationale": "BPIC 2017 offer creation command remains separate from created state.",
+        "token_overrides": {}
+      },
+      "O_offer_created": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "O_CREATED"
+          ],
+          "bpic2017": [
+            "O_Created"
+          ]
+        },
+        "rationale": "Offer created state.",
+        "token_overrides": {}
+      },
+      "O_refuse_offer": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "O_DECLINED"
+          ],
+          "bpic2017": [
+            "O_Refused"
+          ]
+        },
+        "rationale": "Offer-level refusal or decline state.",
+        "token_overrides": {}
+      },
+      "O_return_offer": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "O_SENT_BACK"
+          ],
+          "bpic2017": [
+            "O_Returned"
+          ]
+        },
+        "rationale": "Offer returned by applicant or sent back to the bank.",
+        "token_overrides": {}
+      },
+      "O_select_offer": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "O_SELECTED"
+          ]
+        },
+        "rationale": "BPIC 2012 offer selection has no BPIC 2017 counterpart.",
+        "token_overrides": {}
+      },
+      "O_send_offer": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "O_SENT"
+          ],
+          "bpic2017": [
+            "O_Sent (mail and online)",
+            "O_Sent (online only)"
+          ]
+        },
+        "rationale": "Offer sent state, collapsed across delivery channels.",
+        "token_overrides": {}
+      },
+      "W_assess_fraud": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "W_Beoordelen fraude"
+          ],
+          "bpic2017": [
+            "W_Assess potential fraud"
+          ]
+        },
+        "rationale": "Workflow task assesses potential fraud.",
+        "token_overrides": {}
+      },
+      "W_call_after_offers": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "W_Nabellen offertes"
+          ],
+          "bpic2017": [
+            "W_Call after offers"
+          ]
+        },
+        "rationale": "Workflow task follows up after offers.",
+        "token_overrides": {}
+      },
+      "W_call_incomplete_files": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "W_Nabellen incomplete dossiers"
+          ],
+          "bpic2017": [
+            "W_Call incomplete files"
+          ]
+        },
+        "rationale": "Workflow task follows up on incomplete files.",
+        "token_overrides": {}
+      },
+      "W_complete_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "W_Completeren aanvraag"
+          ],
+          "bpic2017": [
+            "W_Complete application"
+          ]
+        },
+        "rationale": "Workflow task completes application information.",
+        "token_overrides": {}
+      },
+      "W_handle_leads": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "W_Afhandelen leads"
+          ],
+          "bpic2017": [
+            "W_Handle leads"
+          ]
+        },
+        "rationale": "Workflow task handles application leads.",
+        "token_overrides": {}
+      },
+      "W_personal_loan_collection": {
+        "labels_by_dataset": {
+          "bpic2017": [
+            "W_Personal Loan collection"
+          ]
+        },
+        "rationale": "Rare BPIC 2017 workflow task kept as its own state.",
+        "token_overrides": {}
+      },
+      "W_shortened_completion": {
+        "labels_by_dataset": {
+          "bpic2017": [
+            "W_Shortened completion "
+          ]
+        },
+        "rationale": "Rare BPIC 2017 shortened-completion task kept as its own state.",
+        "token_overrides": {}
+      },
+      "W_validate_application": {
+        "labels_by_dataset": {
+          "bpic2012": [
+            "W_Valideren aanvraag"
+          ],
+          "bpic2017": [
+            "W_Validate application"
+          ]
+        },
+        "rationale": "Workflow task validates application information.",
+        "token_overrides": {}
+      }
+    },
+    "unresolved_labels": []
+  },
+  "approved": true,
+  "datasets": {
+    "bpic2012": {
+      "column_mapping": {
+        "case_id": "case:concept:name",
+        "lifecycle": "lifecycle:transition",
+        "next_activity_raw": "NextActivity",
+        "outcome": "outcome",
+        "raw_activity": "concept:name",
+        "raw_activity_token": "activity_token",
+        "remaining_time": "RemainingTime",
+        "requested_amount_value": "case:AMOUNT_REQ",
+        "resource": "org:resource",
+        "time_delta": "TimeDelta",
+        "timestamp": "time:timestamp"
+      },
+      "computed_fields": {
+        "event_index": {
+          "group_by": "case_id",
+          "operation": "cumcount"
+        }
+      },
+      "default_values": {
+        "application_type": "[MISSING]",
+        "application_type_mask": 0,
+        "credit_score_value": null,
+        "loan_goal": "[MISSING]",
+        "loan_goal_mask": 0,
+        "monthly_cost_value": null,
+        "number_of_terms_value": null,
+        "offer_feature_mask": 0,
+        "offer_present": 0,
+        "offered_amount_value": null,
+        "requested_amount_mask": 1
+      },
+      "input_root": "/Users/mad_red_life/Master_Thesis_zeb_project/Deliverables_Michel/E_ablation_BPIC_2012/data/processed",
+      "offer_source_columns": [],
+      "split_prefix": "B_02",
+      "unresolved_fields": []
+    },
+    "bpic2017": {
+      "column_mapping": {
+        "application_type": "case:ApplicationType",
+        "case_id": "case:concept:name",
+        "credit_score_value": "CreditScore",
+        "lifecycle": "lifecycle:transition",
+        "loan_goal": "case:LoanGoal",
+        "monthly_cost_value": "MonthlyCost",
+        "next_activity_raw": "NextActivity",
+        "number_of_terms_value": "NumberOfTerms",
+        "offered_amount_value": "OfferedAmount",
+        "outcome": "outcome",
+        "raw_activity": "concept:name",
+        "raw_activity_token": "activity_token",
+        "remaining_time": "RemainingTime",
+        "requested_amount_value": "case:RequestedAmount",
+        "resource": "org:resource",
+        "time_delta": "TimeDelta",
+        "timestamp": "time:timestamp"
+      },
+      "computed_fields": {
+        "event_index": {
+          "group_by": "case_id",
+          "operation": "cumcount"
+        }
+      },
+      "default_values": {
+        "application_type_mask": 1,
+        "loan_goal_mask": 1,
+        "requested_amount_mask": 1
+      },
+      "input_root": "/Users/mad_red_life/Master_Thesis_zeb_project/Deliverables_Michel/E_main_BPIC_2017/data/processed",
+      "offer_source_columns": [
+        "credit_score_value",
+        "monthly_cost_value",
+        "offered_amount_value",
+        "number_of_terms_value"
+      ],
+      "split_prefix": "A_02",
+      "unresolved_fields": []
+    }
+  },
+  "metadata_summary": {},
+  "mode": "manual",
+  "model": null,
+  "review_notes": [
+    "Manual BPIC thesis ground truth mapping after literature and local parquet review.",
+    "A, O and W source prefixes are preserved and validated during encoding.",
+    "O_Sent delivery variants are collapsed because they are the same offer-sent state with different channels.",
+    "O_Create Offer and O_Created stay separate because the literature treats offer creation and created offer states separately.",
+    "Rare BPIC 2017 workflow activities are retained as separate canonical labels."
+  ],
+  "schema_path": "E_prefix_encoding/mappings/MANUAL_canonical_schemas.json",
+  "schema_profile": "all",
+  "schema_profiles": [
+    "bpic2017",
+    "bpic2012",
+    "joint"
+  ],
+  "schema_sha256": "0bb9e3893b5e2b850ae5c69fbae05e898dd54e0fb4711a07405455b2fd0d2304",
+  "unresolved_items": []
+}

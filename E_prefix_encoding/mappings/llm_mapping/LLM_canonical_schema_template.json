@@ -1,0 +1,389 @@
+{
+  "approved": false,
+  "canonical_activity_labels": {
+    "A_accept_application": {
+      "description": "Application is accepted as a process state before offer handling.",
+      "terminal_candidate": false
+    },
+    "A_activate_application": {
+      "description": "Application is activated after offer or registration handling.",
+      "terminal_candidate": false
+    },
+    "A_approve_application": {
+      "description": "Application reaches an approved decision.",
+      "terminal_candidate": true
+    },
+    "A_cancel_application": {
+      "description": "Application reaches a cancelled decision.",
+      "terminal_candidate": true
+    },
+    "A_complete_application": {
+      "description": "Application file is completed.",
+      "terminal_candidate": false
+    },
+    "A_concept_application": {
+      "description": "Application concept is recorded.",
+      "terminal_candidate": false
+    },
+    "A_create_application": {
+      "description": "Application case is created.",
+      "terminal_candidate": false
+    },
+    "A_deny_application": {
+      "description": "Application reaches a denied decision.",
+      "terminal_candidate": true
+    },
+    "A_finalize_application": {
+      "description": "Application is finalized before offer creation or registration.",
+      "terminal_candidate": false
+    },
+    "A_incomplete_application": {
+      "description": "Application is marked incomplete.",
+      "terminal_candidate": false
+    },
+    "A_partly_submit_application": {
+      "description": "Application is partly submitted.",
+      "terminal_candidate": false
+    },
+    "A_preaccept_application": {
+      "description": "Application passes a preliminary acceptance check.",
+      "terminal_candidate": false
+    },
+    "A_register_application": {
+      "description": "Application is registered after activation.",
+      "terminal_candidate": false
+    },
+    "A_submit_application": {
+      "description": "Application is submitted for processing.",
+      "terminal_candidate": false
+    },
+    "A_validate_application": {
+      "description": "Application enters validation.",
+      "terminal_candidate": false
+    },
+    "O_accept_offer": {
+      "description": "Offer is accepted.",
+      "terminal_candidate": true
+    },
+    "O_cancel_offer": {
+      "description": "Offer is cancelled.",
+      "terminal_candidate": false
+    },
+    "O_create_offer": {
+      "description": "Offer creation is initiated.",
+      "terminal_candidate": false
+    },
+    "O_offer_created": {
+      "description": "Offer exists as a created offer object.",
+      "terminal_candidate": false
+    },
+    "O_refuse_offer": {
+      "description": "Offer is refused or declined.",
+      "terminal_candidate": false
+    },
+    "O_return_offer": {
+      "description": "Offer response is returned.",
+      "terminal_candidate": false
+    },
+    "O_select_offer": {
+      "description": "Offer is selected for further handling.",
+      "terminal_candidate": false
+    },
+    "O_send_offer": {
+      "description": "Offer is sent to the applicant.",
+      "terminal_candidate": false
+    },
+    "W_assess_fraud": {
+      "description": "Workflow task assesses potential fraud.",
+      "terminal_candidate": false
+    },
+    "W_call_after_offers": {
+      "description": "Workflow task calls the applicant after offer handling.",
+      "terminal_candidate": false
+    },
+    "W_call_incomplete_files": {
+      "description": "Workflow task calls the applicant about incomplete files.",
+      "terminal_candidate": false
+    },
+    "W_complete_application": {
+      "description": "Workflow task completes the application file.",
+      "terminal_candidate": false
+    },
+    "W_handle_leads": {
+      "description": "Workflow task handles application leads.",
+      "terminal_candidate": false
+    },
+    "W_personal_loan_collection": {
+      "description": "Workflow task handles personal-loan collection.",
+      "terminal_candidate": false
+    },
+    "W_shortened_completion": {
+      "description": "Workflow task handles shortened completion.",
+      "terminal_candidate": false
+    },
+    "W_validate_application": {
+      "description": "Workflow task validates the application.",
+      "terminal_candidate": false
+    }
+  },
+  "contract_field_catalog": {
+    "application_type": {
+      "field_name": "application_type",
+      "group": "static_case_columns",
+      "role": "Application type category.",
+      "value_type": "string"
+    },
+    "application_type_mask": {
+      "field_name": "application_type_mask",
+      "group": "static_case_columns",
+      "role": "Application type availability mask.",
+      "value_type": "integer"
+    },
+    "canonical_activity_label": {
+      "field_name": "canonical_activity_label",
+      "group": "mapped_columns",
+      "role": "Contract-approved activity label.",
+      "value_type": "string"
+    },
+    "canonical_activity_token": {
+      "field_name": "canonical_activity_token",
+      "group": "mapped_columns",
+      "role": "Activity label plus lifecycle token.",
+      "value_type": "string"
+    },
+    "case_id": {
+      "field_name": "case_id",
+      "group": "base_event_columns",
+      "role": "Case identifier.",
+      "value_type": "string"
+    },
+    "client_id": {
+      "field_name": "client_id",
+      "group": "base_event_columns",
+      "role": "Federated client identifier.",
+      "value_type": "string"
+    },
+    "credit_score_value": {
+      "field_name": "credit_score_value",
+      "group": "offer_state_columns",
+      "role": "Current offer credit score.",
+      "value_type": "float"
+    },
+    "dataset_id": {
+      "field_name": "dataset_id",
+      "group": "base_event_columns",
+      "role": "Dataset identifier.",
+      "value_type": "string"
+    },
+    "event_index": {
+      "field_name": "event_index",
+      "group": "base_event_columns",
+      "role": "Event order inside one case.",
+      "value_type": "integer"
+    },
+    "lifecycle": {
+      "field_name": "lifecycle",
+      "group": "base_event_columns",
+      "role": "Lifecycle value or missing token.",
+      "value_type": "string"
+    },
+    "loan_goal": {
+      "field_name": "loan_goal",
+      "group": "static_case_columns",
+      "role": "Loan goal category.",
+      "value_type": "string"
+    },
+    "loan_goal_mask": {
+      "field_name": "loan_goal_mask",
+      "group": "static_case_columns",
+      "role": "Loan goal availability mask.",
+      "value_type": "integer"
+    },
+    "monthly_cost_value": {
+      "field_name": "monthly_cost_value",
+      "group": "offer_state_columns",
+      "role": "Current offer monthly cost.",
+      "value_type": "float"
+    },
+    "next_activity_mask": {
+      "field_name": "next_activity_mask",
+      "group": "mapped_columns",
+      "role": "Next-activity loss mask.",
+      "value_type": "integer"
+    },
+    "next_activity_raw": {
+      "field_name": "next_activity_raw",
+      "group": "base_event_columns",
+      "role": "Next source activity token.",
+      "value_type": "string"
+    },
+    "next_activity_target": {
+      "field_name": "next_activity_target",
+      "group": "mapped_columns",
+      "role": "Next canonical activity token.",
+      "value_type": "string"
+    },
+    "number_of_terms_value": {
+      "field_name": "number_of_terms_value",
+      "group": "offer_state_columns",
+      "role": "Current offer term count.",
+      "value_type": "float"
+    },
+    "offer_feature_mask": {
+      "field_name": "offer_feature_mask",
+      "group": "offer_state_columns",
+      "role": "Offer feature availability mask.",
+      "value_type": "integer"
+    },
+    "offer_present": {
+      "field_name": "offer_present",
+      "group": "offer_state_columns",
+      "role": "Offer-state availability flag.",
+      "value_type": "integer"
+    },
+    "offered_amount_value": {
+      "field_name": "offered_amount_value",
+      "group": "offer_state_columns",
+      "role": "Current offered amount.",
+      "value_type": "float"
+    },
+    "outcome": {
+      "field_name": "outcome",
+      "group": "base_event_columns",
+      "role": "Multiclass outcome label.",
+      "value_type": "integer"
+    },
+    "raw_activity": {
+      "field_name": "raw_activity",
+      "group": "base_event_columns",
+      "role": "Source activity label.",
+      "value_type": "string"
+    },
+    "raw_activity_token": {
+      "field_name": "raw_activity_token",
+      "group": "base_event_columns",
+      "role": "Source activity plus lifecycle token.",
+      "value_type": "string"
+    },
+    "remaining_time": {
+      "field_name": "remaining_time",
+      "group": "base_event_columns",
+      "role": "Seconds until the decision event.",
+      "value_type": "float"
+    },
+    "remaining_time_mask": {
+      "field_name": "remaining_time_mask",
+      "group": "mapped_columns",
+      "role": "Remaining-time loss mask.",
+      "value_type": "integer"
+    },
+    "requested_amount_mask": {
+      "field_name": "requested_amount_mask",
+      "group": "static_case_columns",
+      "role": "Requested amount availability mask.",
+      "value_type": "integer"
+    },
+    "requested_amount_value": {
+      "field_name": "requested_amount_value",
+      "group": "static_case_columns",
+      "role": "Requested amount value.",
+      "value_type": "float"
+    },
+    "resource": {
+      "field_name": "resource",
+      "group": "base_event_columns",
+      "role": "Event-level resource feature.",
+      "value_type": "string"
+    },
+    "split": {
+      "field_name": "split",
+      "group": "base_event_columns",
+      "role": "Train, validation or test split.",
+      "value_type": "string"
+    },
+    "time_delta": {
+      "field_name": "time_delta",
+      "group": "base_event_columns",
+      "role": "Elapsed seconds since case start.",
+      "value_type": "float"
+    },
+    "timestamp": {
+      "field_name": "timestamp",
+      "group": "base_event_columns",
+      "role": "Event timestamp.",
+      "value_type": "datetime"
+    }
+  },
+  "contract_field_groups": {
+    "base_event_columns": [
+      "case_id",
+      "event_index",
+      "timestamp",
+      "raw_activity",
+      "lifecycle",
+      "raw_activity_token",
+      "next_activity_raw",
+      "resource",
+      "time_delta",
+      "remaining_time",
+      "outcome",
+      "dataset_id",
+      "client_id",
+      "split"
+    ],
+    "mapped_columns": [
+      "canonical_activity_label",
+      "canonical_activity_token",
+      "next_activity_target",
+      "next_activity_mask",
+      "remaining_time_mask"
+    ],
+    "offer_state_columns": [
+      "offer_present",
+      "offer_feature_mask",
+      "credit_score_value",
+      "monthly_cost_value",
+      "offered_amount_value",
+      "number_of_terms_value"
+    ],
+    "static_case_columns": [
+      "requested_amount_value",
+      "requested_amount_mask",
+      "loan_goal",
+      "loan_goal_mask",
+      "application_type",
+      "application_type_mask"
+    ]
+  },
+  "mode": "manual",
+  "model": null,
+  "reserved_tokens": {
+    "end": "[END]",
+    "missing": "[MISSING]",
+    "other_activity": "[OTHER_ACTIVITY]",
+    "pad": "[PAD]",
+    "unknown": "[UNK]"
+  },
+  "review_notes": [
+    "THE SECTION BELOW IS FOR MANUALLY FILLING IN YOUR DATASETS",
+    "Copy the placeholder for each schema profile and remove it before approval."
+  ],
+  "schema_profiles": {
+    "<profile_name>": {
+      "datasets": [],
+      "field_help": {
+        "datasets": "Dataset ids covered by this profile.",
+        "max_prefix_length_for_encoding": "Integer prefix cap used for padding and sample generation.",
+        "offer_numerical_columns": "Offer-state numerical inputs from contract_field_catalog.",
+        "sequence_categorical_columns": "Categorical model inputs from contract_field_catalog.",
+        "sequence_numerical_columns": "Numerical model inputs from contract_field_catalog."
+      },
+      "max_prefix_length_for_encoding": null,
+      "offer_numerical_columns": [],
+      "review_note": "Replace <profile_name> and fill every required field before approval.",
+      "sequence_categorical_columns": [],
+      "sequence_numerical_columns": []
+    }
+  },
+  "unresolved_items": []
+}
