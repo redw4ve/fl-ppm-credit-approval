@@ -12,9 +12,12 @@ DP_WORKFLOW = E_TRAINING_DIR / "WORKFLOW_run_federated_dp_final.sh"
 MASTER_WORKFLOW = REPO_ROOT / "WORKFLOW_run_FULL_PIPELINE.sh"
 
 class JointWorkflowTests(unittest.TestCase):
-    # HELPER: Build dry run.
+    # HELPER: Run one workflow dry run with the caller's stage toggles stripped, so defaults stay observable.
     def _dry_run(self, script: Path, extra_env: dict[str, str] | None = None) -> str:
-        env = os.environ.copy()
+        dropped = {"RESILIENT", "REPORTING_PROFILE", "OUTPUT_ROOT", "CACHE_ROOT", "ARTIFACT_ROOT",
+                   "FAILED_RUNS_LOG", "STRATEGY", "DEVICE", "DRY_RUN"}
+        env = {key: value for key, value in os.environ.items()
+               if not key.startswith(("RUN_", "CLEAN_")) and key not in dropped}
         env.update({"DRY_RUN": "true"})
         if extra_env is not None:
             env.update(extra_env)
