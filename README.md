@@ -431,18 +431,3 @@ Locked workflow defaults:
   tensors survive deletion of the output folder.
 - Checkpoint selection uses the best `val_loss_total` epoch only; the per-head best-epoch records and the
   remaining-time train-median baseline are diagnostic and do not influence the saved checkpoint.
-
-### Optional E_05 Improvements (Not Implemented)
-
-The following improvements are documented but not implemented by default.
-They are only to be added when explicitly requested.
-Multi-seed averaging is not on this list.
-It was closed on 2026-06-29, so seed 42 is the only seed of the reported matrices.
-
-- Focal loss on outcome head with gamma 2.0 in place of weighted cross-entropy.
-  It would change the locked multiclass outcome-loss design and needs a separate supervisor decision.
-- Raise `HEAD_HIDDEN_SIZE` from 64 to 128 to match the larger trunk.
-- Curriculum learning by prefix length over the first few epochs.
-
-Weighted CE beats unweighted CE on balanced accuracy (0.64 vs. 0.58) and on minority-class recall (denied 0.45 vs.
-0.32, canceled 0.82 vs. 0.53) at near-identical macro F1.
